@@ -1,11 +1,10 @@
 import './App.css'
+import TaskManager from './task/index'
 
 function App() {
   return (
     <>
-      <div>
-        task manager
-      </div>
+      <TaskManager />
     </>
   )
 }

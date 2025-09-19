@@ -1,42 +1,133 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+}
+
+.App {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
   text-align: center;
+  margin-bottom: 20px;
+  color: #2d3748;
+  font-size: 28px;
+  font-weight: bold;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e0;
+  outline: none;
+  transition: 0.2s ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+input:focus {
+  border-color: #3182ce;
+  box-shadow: 0 0 5px rgba(49, 130, 206, 0.4);
 }
 
-.card {
-  padding: 2em;
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
-.read-the-docs {
-  color: #888;
+button:hover {
+  opacity: 0.9;
 }
+
+/* Primary Button */
+button[type="submit"] {
+  background-color: #3182ce;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Task Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th {
+  background-color: #3182ce;
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-size: 16px;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 14px;
+  color: #2d3748;
+}
+
+/* Action Buttons */
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.actions button {
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+.actions .complete {
+  background-color: #38a169;
+  color: white;
+}
+
+.actions .delete {
+  background-color: #e53e3e;
+  color: white;
+}
+
+/* Status Badge */
+.status {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+.status.pending {
+  background-color: #f6ad55;
+  color: #fff;
+}
+
+.status.completed {
+  background-color: #38a169;
+  color: #fff;
+}
+/* Responsive Design */
+@media (max-width: 600px) {
+  .App {    
+    margin: 20px;
+    padding: 20px;
+  }}
